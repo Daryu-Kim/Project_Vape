@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vape" >
+        <activity android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterAgreeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterInputActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyUsageInforActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyUsageNameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyUsageReportActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayStateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayOnceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayPaymentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayReceiptActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayRequestActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyPayChangeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyMemMembershipActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyMemPointActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyMemCouponActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyShopOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyShopBasketActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyShopReviewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComRecommendActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComReviewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComQuesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComSuggestActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComReportActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuideDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuideAtomizerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuideDeviceManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuideAtomizerManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GuideRebuildManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemGuideMyActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemGuideGradeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemDiscountShopActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemDiscountBrandActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemEventOngoingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemEventWinnerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MemEventEndActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceSupportActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceStoreFindActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceStoreCsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceStoreAsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceInquireFaqActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceInquireCallActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceInquireKakaotalkActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceAsSelfActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceAsRequestActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceGuideServiceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceGuideShopActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceGuideDamageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ServiceNewsNoticeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopHomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopDeviceMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopDeviceLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAtomizerPodActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAtomizerTankActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAtomizerRebuildActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidMentholMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidMentholLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidFruitMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidFruitLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidDrinkMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidDrinkLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidDessertMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidDessertLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopLiquidAddiActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopNicofreeMouthActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopNicofreeLungActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessoryCoilActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessory510Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessory810Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessoryRebuildActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessoryCaseActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessoryBatteryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ShopAccessoryFilmActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="DARK_Background">#0a0a0a</color>
+    <color name="DARK_Sub">#333</color>
+    <color name="DARK_Third">#555</color>
+    <color name="DARK_Text_Sub">#9a9a9a</color>
+
+    <color name="Text_White">#fff</color>
+
+    <color name="gradient_red">#fc466b</color>
+    <color name="gradient_blue">#3f5efb</color>
+    <color name="gradient_purple">#9753b8</color>
+</resources>

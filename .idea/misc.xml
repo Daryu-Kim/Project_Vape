@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Vape/app/src/main/res/drawable/base_active_btn.xml" value="0.382" />
+        <entry key="..\:/Vape/app/src/main/res/drawable/base_border.xml" value="0.382" />
+        <entry key="..\:/Vape/app/src/main/res/drawable/base_deactive_btn.xml" value="0.382" />
+        <entry key="..\:/Vape/app/src/main/res/drawable/base_edittext.xml" value="0.382" />
+        <entry key="..\:/Vape/app/src/main/res/drawable/base_edittext_selector.xml" value="0.382" />
+        <entry key="..\:/Vape/app/src/main/res/layout/activity_login.xml" value="0.7083333333333334" />
+        <entry key="..\:/Vape/app/src/main/res/layout/activity_main.xml" value="0.6648148148148149" />
+        <entry key="..\:/Vape/app/src/main/res/layout/activity_menu.xml" value="0.67" />
+        <entry key="..\:/Vape/app/src/main/res/layout/activity_splash.xml" value="0.7083333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
