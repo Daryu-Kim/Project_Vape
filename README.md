@@ -1,7 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=rect&color=0:3f5efb,100:fc466b&text=%20e-Cigarette%20Subscription%20Service%20'V'%20&textBg=true&animation=fadeIn&fontColor=FFFFFF&fontSize=36&fontAlign=50&fontAlignY=50)
 
 
-사용 기술
 <div align=center>
   사용 기술
   <br>
