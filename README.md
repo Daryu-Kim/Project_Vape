@@ -7,7 +7,7 @@ Only adults over 20 years old in Korean age can sign up.
 
 The iOS version is not currently under development according to the App Store policy, and you will need to use it on the website that will be developed in the future.
 
-[Click here for the Korean version of ReadMe.](https://github.com/Daryu-Kim/Vape/blob/main/README_KR.md))
+[Click here for the Korean version of ReadMe.](https://github.com/Daryu-Kim/Vape/blob/main/README_KR.md)
 
 
 # Development Environment
