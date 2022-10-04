@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Vape</string>
+    <string name="NATIVE_APP_KEY">1a1e101b8b43cd2662a5980d22a3c2da</string>
 
     <string name="main_btnav_layout_myaccount_tv">마이</string>
     <string name="main_btnav_layout_home_tv">홈</string>
     <string name="main_btnav_layout_mymembership_tv">멤버십</string>
-    <string name="login_content_login_tv_text">로그인</string>
+    <string name="login_content_login_tv_text">로그인 후\n</string>
     <string name="login_content_login_id_text">V 아이디 또는 이메일</string>
 </resources>
