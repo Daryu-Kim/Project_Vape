@@ -10,7 +10,7 @@
         android:id="@+id/menu_function_layout"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:paddingHorizontal="36dp"
+        android:paddingHorizontal="24dp"
         android:paddingVertical="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -42,7 +42,7 @@
         android:id="@+id/menu_user_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="36dp"
+        android:paddingHorizontal="24dp"
         android:paddingVertical="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -81,48 +81,11 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/menu_notlogin_layout_regibtn_layout"
+                android:id="@+id/menu_notlogin_layout_loginbtn_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/menu_notlogin_layout_loginbtn_layout"
-                app:layout_constraintTop_toBottomOf="@id/menu_notlogin_hello_tv1">
-
-                <ImageButton
-                    android:id="@+id/menu_notlogin_layout_regibtn"
-                    android:layout_width="0dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/base_deactive_btn"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/menu_notlogin_layout_regibtn_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/medium"
-                    android:gravity="center"
-                    android:text="회원가입"
-                    android:textColor="@color/Text_White"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/menu_notlogin_layout_loginbtn_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/menu_notlogin_layout_regibtn_layout"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/menu_notlogin_hello_tv1">
 
@@ -206,7 +169,7 @@
         android:id="@+id/menu_login_function_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="36dp"
+        android:layout_marginHorizontal="24dp"
         android:paddingVertical="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -321,7 +284,7 @@
         android:id="@+id/menu_login_app_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="36dp"
+        android:paddingHorizontal="24dp"
         android:paddingVertical="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -369,7 +332,7 @@
                 android:id="@+id/menu_submenu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="36dp"
+                android:paddingHorizontal="24dp"
                 android:paddingBottom="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

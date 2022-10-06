@@ -22,7 +22,7 @@ public class MenuActivity extends Activity {
 
     // Menu NotLogin Define
     ConstraintLayout menu_notlogin_layout;
-    ImageButton menu_notlogin_layout_regibtn, menu_notlogin_layout_loginbtn;
+    ImageButton menu_notlogin_layout_loginbtn;
 
     // Menu Login Define
     ConstraintLayout menu_login_layout;
@@ -205,7 +205,6 @@ public class MenuActivity extends Activity {
 
         // Menu NotLogin Declare
         menu_notlogin_layout = findViewById(R.id.menu_notlogin_layout);
-        menu_notlogin_layout_regibtn = findViewById(R.id.menu_notlogin_layout_regibtn);
         menu_notlogin_layout_loginbtn = findViewById(R.id.menu_notlogin_layout_loginbtn);
 
         // Menu Login Declare
@@ -477,14 +476,6 @@ public class MenuActivity extends Activity {
         });
 
         // Menu NotLogin OnClick
-        menu_notlogin_layout_regibtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, RegisterAgreeActivity.class);
-                startActivity(intent);
-            }
-        });
-
         menu_notlogin_layout_loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

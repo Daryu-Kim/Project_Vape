@@ -29,6 +29,25 @@ public class SplashActivity extends Activity {
         checkPermissions();
     }
 
+    private void checkPhoneNumber() {
+
+        TelephonyManager telManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_NUMBERS) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+
+        } else {
+            @SuppressLint("HardwareIds") String PhoneNum = telManager.getLine1Number();
+            Log.d("TAG", PhoneNum);
+            if (PhoneNum.equals("")) {
+                Toast.makeText(this, "전화번호 없음", Toast.LENGTH_SHORT).show();
+                //finish();
+            } else {
+
+            }
+        }
+
+    }
+
     private void checkPermissions() {
         int call_phone = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
         int read_phone_numbers = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_NUMBERS);

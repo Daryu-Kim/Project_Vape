@@ -72,41 +72,62 @@
             app:layout_constraintTop_toBottomOf="@id/login_content_login_tv1"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/login_content_login_social_layout"
+            android:id="@+id/login_content_login_phone_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
-            <ImageButton
-                android:id="@+id/login_content_login_social_kakao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/kakao_login_medium_wide"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
-                android:id="@+id/login_content_login_social_tv"
+                android:id="@+id/login_content_login_phone_btn_tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/login_content_login_social_kakao"
-                android:text="회원가입 없이 소셜 계정을 통해 바로 이용 가능하며 첫 로그인 시\n서비스 이용을 위한 필수 항목에 대해 동의함으로 간주됩니다."
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="휴대폰 번호 인증을 통해 바로 이용 가능하며 최초 1회에 한하여 로그인 시 서비스 이용을 위한 필수 항목에 대해 동의함으로 간주됩니다."
                 android:fontFamily="@font/medium"
-                android:layout_marginTop="36dp"
                 android:textSize="12dp"/>
 
             <TextView
-                android:id="@+id/login_content_login_social_tv2"
+                android:id="@+id/login_content_login_phone_btn_tv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/login_content_login_social_tv"
+                app:layout_constraintTop_toBottomOf="@id/login_content_login_phone_btn_tv1"
                 android:text="클릭 시 서비스 이용을 위한 필수 동의 항목을 확인합니다."
                 android:fontFamily="@font/medium"
                 android:layout_marginTop="8dp"
                 android:textSize="9dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/login_content_login_phone_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_content_login_phone_btn_tv2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_idcard_take_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰 번호로 로그인"
+                    android:fontFamily="@font/medium"
+                    android:textColor="#fff"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

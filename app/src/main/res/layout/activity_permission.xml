@@ -17,112 +17,329 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/permission_content_layout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingHorizontal="24dp"
         android:paddingVertical="48dp"
+        android:scrollbars="none"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/permission_menu_layout"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/permission_content_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bold"
-            android:text="V 권한 안내"
-            android:textColor="@color/gradient_blue"
-            android:textSize="28dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/permission_content_tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/medium"
-            android:text="V는 아래 권한들을 필요로 합니다."
-            android:textColor="#eee"
-            android:textSize="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/permission_content_title"/>
-
-        <TextView
-            android:id="@+id/permission_content_tv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/medium"
-            android:text="서비스 사용 중 앱에서 요청 시 허용해주세요."
-            android:textColor="#eee"
-            android:textSize="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/permission_content_tv1"/>
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/permission_content_must_layout"
+            android:id="@+id/permission_content_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="48dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/permission_content_tv2">
+            android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/permission_content_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/permission_content_must_tv"
-                android:fontFamily="@font/medium"
+                android:fontFamily="@font/bold"
+                android:text="V 권한 안내"
                 android:textColor="@color/gradient_blue"
-                android:text="필수 접근 권한"
+                android:textSize="28dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/permission_content_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="V는 아래 권한들을 필요로 합니다."
+                android:textColor="#eee"
                 android:textSize="16dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/permission_content_title"/>
+
+            <TextView
+                android:id="@+id/permission_content_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="서비스 사용 중 앱에서 요청 시 허용해주세요."
+                android:textColor="#eee"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/permission_content_tv1"/>
+
+            <TextView
+                android:id="@+id/permission_content_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium"
+                android:text="필수 권한 미동의 시 서비스를 이용할 수 없습니다."
+                android:textColor="@color/gradient_red"
+                android:layout_marginTop="8dp"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/permission_content_tv2"/>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/permission_content_must_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/permission_content_must_call_layout"
-                android:paddingLeft="36dp"
-                android:layout_marginTop="16dp"
+                android:paddingVertical="48dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/permission_content_must_tv">
+                app:layout_constraintTop_toBottomOf="@id/permission_content_tv3">
 
                 <TextView
-                    android:layout_width="64dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="전화"
+                    android:id="@+id/permission_content_must_tv"
                     android:fontFamily="@font/medium"
-                    android:textSize="14dp"
-                    android:id="@+id/permission_content_must_call_title"
+                    android:textColor="@color/gradient_blue"
+                    android:text="필수 접근 권한"
+                    android:textSize="16dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
-                <TextView
-                    android:layout_width="0dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="로그인, 구독 신청 상담, 고객센터 연결, 전화 수신 중 발신자 정보 확인 시 필요합니다."
-                    android:fontFamily="@font/medium"
-                    android:textSize="14dp"
-                    android:id="@+id/permission_content_must_call_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/permission_content_must_call_title"
-                    android:paddingLeft="16dp"
-                    app:layout_constraintRight_toRightOf="parent"/>
+                    android:id="@+id/permission_content_must_call_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_must_tv">
 
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="전화"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_call_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="로그인, 구독 신청 상담, 고객센터 연결, 전화 수신 중 발신자 정보 확인 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_call_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_must_call_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_must_camera_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_must_call_layout">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="카메라"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_camera_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="성인인증을 위한 신분증 촬영 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_camera_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_must_camera_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_must_storage_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_must_camera_layout">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="저장공간"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_storage_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="CS 대응을 위한 로그 생성, 전자계약서 다운로드 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_storage_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_must_storage_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_must_sms_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_must_storage_layout">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="SMS"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_sms_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="성인인증을 위한 휴대폰 인증 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_must_sms_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_must_sms_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/permission_content_optional_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/permission_content_must_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_optional_tv"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/gradient_blue"
+                    android:text="선택 접근 권한"
+                    android:textSize="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_optional_mic_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_optional_tv">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="마이크"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_optional_mic_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="검색 기능 사용 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_optional_mic_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_optional_mic_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/permission_content_optional_map_layout"
+                    android:paddingLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/permission_content_optional_mic_layout">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:text="지도"
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_optional_map_title"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="주변 추천 매장 검색 시 필요합니다."
+                        android:fontFamily="@font/medium"
+                        android:textSize="14dp"
+                        android:id="@+id/permission_content_optional_map_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/permission_content_optional_map_title"
+                        android:paddingLeft="8dp"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
