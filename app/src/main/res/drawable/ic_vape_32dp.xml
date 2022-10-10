@@ -1,0 +1,10 @@
+<vector android:height="32dp" android:viewportHeight="100"
+    android:viewportWidth="100" android:width="32dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/gradient_blue" android:pathData="M76.49,100H30.37c-1.31,0 -2.36,-1.06 -2.36,-2.36V32.06c0,-1.3 1.06,-2.36 2.36,-2.36h46.12c1.31,0 2.36,1.06 2.36,2.36v65.58C78.85,98.94 77.79,100 76.49,100zM32.73,95.28h41.39V34.42h-41.39V95.28z"/>
+    <path android:fillColor="@color/gradient_blue" android:pathData="M76.49,34.42H50.51c-1.31,0 -2.36,-1.06 -2.36,-2.36V10.57c0,-1.3 1.06,-2.36 2.36,-2.36h25.98c1.31,0 2.36,1.06 2.36,2.36v21.48C78.85,33.36 77.79,34.42 76.49,34.42zM52.87,29.7h21.26V12.94H52.87V29.7z"/>
+    <path android:fillColor="@color/gradient_blue" android:pathData="M68.05,26.21c-1.31,0 -2.36,-1.06 -2.36,-2.36V4.72h-4.27v19.12c0,1.3 -1.06,2.36 -2.36,2.36c-1.31,0 -2.36,-1.06 -2.36,-2.36V2.36C56.69,1.06 57.75,0 59.05,0h9c1.31,0 2.36,1.06 2.36,2.36v21.49C70.42,25.15 69.36,26.21 68.05,26.21z"/>
+    <path android:fillColor="@color/gradient_blue" android:pathData="M76.49,26.21H50.51c-1.31,0 -2.36,-1.06 -2.36,-2.36s1.06,-2.36 2.36,-2.36h25.98c1.31,0 2.36,1.06 2.36,2.36S77.79,26.21 76.49,26.21z"/>
+    <path android:fillColor="@color/gradient_blue" android:pathData="M76.49,87.18H30.37c-1.31,0 -2.36,-1.06 -2.36,-2.36c0,-1.3 1.06,-2.36 2.36,-2.36h46.12c1.31,0 2.36,1.06 2.36,2.36C78.85,86.12 77.79,87.18 76.49,87.18z"/>
+    <path android:fillColor="@color/gradient_blue" android:pathData="M30.37,53.43h-6.86c-1.31,0 -2.36,-1.06 -2.36,-2.36V39.03c0,-1.3 1.06,-2.36 2.36,-2.36h6.86c1.31,0 2.36,1.06 2.36,2.36c0,1.3 -1.06,2.36 -2.36,2.36h-4.5v7.31h4.5c1.31,0 2.36,1.06 2.36,2.36C32.73,52.37 31.68,53.43 30.37,53.43z"/>
+    <path android:fillColor="@color/gradient_red" android:pathData="M68.96,70.19H57.48c-1.31,0 -2.36,-1.06 -2.36,-2.36V40.16c0,-1.3 1.06,-2.36 2.36,-2.36h11.47c1.31,0 2.36,1.06 2.36,2.36v27.67C71.32,69.13 70.26,70.19 68.96,70.19zM59.84,65.47h6.75V42.52h-6.75V65.47z"/>
+</vector>
