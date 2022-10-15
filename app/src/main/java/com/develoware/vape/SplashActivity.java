@@ -16,8 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.kakao.sdk.common.util.Utility;
-
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends Activity {
 

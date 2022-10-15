@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 public class LoginActivity extends Activity {
     // Define
-    ImageButton login_menu_beforebtn, login_content_login_social_kakao;
+    ImageButton login_menu_beforebtn;
+    ConstraintLayout login_content_login_phone_btn_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +20,7 @@ public class LoginActivity extends Activity {
 
         // Declare
         login_menu_beforebtn = findViewById(R.id.login_menu_beforebtn);
-        login_content_login_social_kakao = findViewById(R.id.login_content_login_social_kakao);
+        login_content_login_phone_btn_layout = findViewById(R.id.login_content_login_phone_btn_layout);
 
         // OnClick
         login_menu_beforebtn.setOnClickListener(new View.OnClickListener() {
@@ -27,7 +30,7 @@ public class LoginActivity extends Activity {
             }
         });
 
-        login_content_login_social_kakao.setOnClickListener(new View.OnClickListener() {
+        login_content_login_phone_btn_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), IdcardReadyActivity.class);

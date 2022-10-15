@@ -17,7 +17,6 @@
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
 
     <application
-        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -37,11 +36,8 @@
         <activity android:name=".MenuActivity" android:screenOrientation="portrait"/>
         <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
         <activity android:name=".IdcardReadyActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".RegisterAgreeActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".RegisterInputActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MyUsageInforActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MyUsageNameActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".MyUsageReportActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MyPayStateActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MyPayOnceActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MyPayPaymentActivity" android:screenOrientation="portrait"/>

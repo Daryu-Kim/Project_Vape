@@ -49,7 +49,7 @@ public class MenuActivity extends Activity {
 
     // Sub Menu MY_Usage Define
     ImageView menu_submenu_content_my_usage_border;
-    ConstraintLayout menu_submenu_my_usage_infor_layout, menu_submenu_my_usage_name_layout, menu_submenu_my_usage_report_layout;
+    ConstraintLayout menu_submenu_my_usage_infor_layout, menu_submenu_my_usage_name_layout;
 
     // Sub Menu MY_Pay Define
     ImageView menu_submenu_content_my_pay_border;
@@ -250,7 +250,6 @@ public class MenuActivity extends Activity {
         menu_submenu_content_my_usage_border = findViewById(R.id.menu_submenu_content_my_usage_border);
         menu_submenu_my_usage_infor_layout = findViewById(R.id.menu_submenu_my_usage_infor_layout);
         menu_submenu_my_usage_name_layout = findViewById(R.id.menu_submenu_my_usage_name_layout);
-        menu_submenu_my_usage_report_layout = findViewById(R.id.menu_submenu_my_usage_report_layout);
 
         // Sub Menu MY_Pay Declare
         menu_submenu_content_my_pay_border = findViewById(R.id.menu_submenu_content_my_pay_border);
@@ -638,7 +637,6 @@ public class MenuActivity extends Activity {
                     menu_submenu_content_my_usage_border.setVisibility(View.VISIBLE);
                     menu_submenu_my_usage_infor_layout.setVisibility(View.VISIBLE);
                     menu_submenu_my_usage_name_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_usage_report_layout.setVisibility(View.VISIBLE);
                     my_usage_isClicked = Boolean.TRUE;
                     menu_submenu_content_my_usage_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
                 } else {
@@ -662,15 +660,6 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MenuActivity.this, MyUsageNameActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Usage_Report OnClick
-        menu_submenu_my_usage_report_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, MyUsageReportActivity.class);
                 startActivity(intent);
             }
         });
@@ -1624,7 +1613,6 @@ public class MenuActivity extends Activity {
         menu_submenu_content_my_usage_border.setVisibility(View.GONE);
         menu_submenu_my_usage_infor_layout.setVisibility(View.GONE);
         menu_submenu_my_usage_name_layout.setVisibility(View.GONE);
-        menu_submenu_my_usage_report_layout.setVisibility(View.GONE);
         my_usage_isClicked = Boolean.FALSE;
         menu_submenu_content_my_usage_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
 

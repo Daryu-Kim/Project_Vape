@@ -7,7 +7,7 @@
 
     <color name="Text_White">#fff</color>
 
-    <color name="gradient_red">#fc466b</color>
+    <color name="gradient_red"># </color>
     <color name="gradient_blue">#3f5efb</color>
     <color name="gradient_purple">#9753b8</color>
 </resources>

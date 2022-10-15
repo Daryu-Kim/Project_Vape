@@ -46,7 +46,7 @@
         android:layout_height="0dp"
         android:paddingHorizontal="24dp"
         android:paddingVertical="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/my_usage_infor_menu_layout">
@@ -73,8 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
-                android:gravity="center"
                 android:fontFamily="@font/medium"
+                android:gravity="center"
                 android:text="폐호흡"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -82,14 +82,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/my_usage_infor_content_tab_border"
                 android:layout_width="1dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/base_border"
-                app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_tab_category"
-                android:id="@+id/my_usage_infor_content_tab_border"
                 android:layout_marginLeft="12dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                android:background="@drawable/base_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_tab_category"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/my_usage_infor_content_tab_device"
@@ -97,9 +97,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:fontFamily="@font/medium"
+                android:gravity="center"
                 android:text="유웰 하보크"
                 android:textSize="16dp"
-                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_tab_border"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -116,33 +116,924 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/my_usage_infor_content_detail_layout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:paddingVertical="24dp"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_tab_layout"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_tab_layout">
+            android:scrollbars="none">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_usage_infor_content_detail_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/base_register_deactive_btn"
                 android:paddingVertical="24dp"
-                android:id="@+id/my_usage_infor_content_detail_summary_layout"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_tab_layout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_usage_infor_content_detail_summary_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_register_deactive_btn"
+                    android:paddingVertical="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_summary_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/bold"
+                            android:text="가입 상세정보"
+                            android:paddingLeft="4dp"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_menu_spread_arrow_32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_summary_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="28dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_title_layout">
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/gradient_blue"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 가입일자 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_date_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="가입일자"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_border" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_date_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_date_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_date_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_date_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_date_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_date_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="2022-10-11"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_date_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_border" />
+
+                        <!-- 이용기간 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_use_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="이용기간"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_date_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_use_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_use_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_use_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_use_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_use_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_use_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="3개월 27일"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_use_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_date_title" />
+
+                        <!-- 기기정보 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_device_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="기기정보"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_use_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_device_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_device_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_device_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_device_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_device_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_device_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="UWELL Havok Black"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_device_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_use_title" />
+
+                        <!-- 결합정보 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_combi_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="결합정보"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_device_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_combi_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_combi_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_combi_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_combi_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_combi_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_combi_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="프리미엄 친구 결합"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_combi_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_device_title" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_usage_infor_content_detail_sale_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_register_deactive_btn"
+                    android:paddingVertical="24dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_sale_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/bold"
+                            android:text="할인 지원금"
+                            android:paddingLeft="4dp"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_menu_spread_arrow_32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_sale_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="28dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_title_layout">
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_sale_content_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/gradient_blue"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 할인상품 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_sale_content_discount_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="할인상품"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_content_border" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_sale_content_discount_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_sale_content_discount_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_sale_content_discount_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_sale_content_discount_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_sale_content_discount_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_sale_content_discount_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="프리미엄 친구 결합"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_sale_content_discount_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_content_border"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_sale_content_discount_border"/>
+
+                        <!-- 계약기간 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_period_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="계약기간"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_content_discount_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_period_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_period_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_period_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_period_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_period_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_period_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="2022-10-11 ~ 2023-04-10"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_period_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_content_discount_title" />
+
+                        <!-- 위약금 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_cancel_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="위약금"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_period_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_cancel_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_cancel_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_summary_content_cancel_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_summary_content_cancel_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_summary_content_cancel_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_summary_content_cancel_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="중도 해지 시 13,485원"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_summary_content_cancel_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_summary_content_period_title" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_usage_infor_content_detail_split_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_register_deactive_btn"
+                    android:paddingVertical="24dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_sale_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_split_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/bold"
+                            android:text="분할상환 정보"
+                            android:paddingLeft="4dp"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_menu_spread_arrow_32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_split_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="28dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_title_layout">
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/gradient_blue"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 모델명 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_model_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="모델명"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_content_border" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_model_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_split_content_model_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_split_content_model_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_split_content_model_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_split_content_model_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_model_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="HAVOKB20220201"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_split_content_model_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_content_border"/>
+
+                        <!-- 잔여할부 정보 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_remain_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="잔여할부"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_content_model_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_remain_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_split_content_remain_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_split_content_remain_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_split_content_remain_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_split_content_remain_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_split_content_remain_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="206,442원 [7/36]"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_split_content_remain_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_content_model_title"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_usage_infor_content_detail_insurance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_register_deactive_btn"
+                    android:paddingVertical="24dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_split_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_insurance_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/bold"
+                            android:text="보험 정보"
+                            android:paddingLeft="4dp"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_menu_spread_arrow_32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_insurance_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="28dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_insurance_title_layout">
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_insurance_content_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/gradient_blue"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 보험명 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_insurance_content_name_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="보험명"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_insurance_content_border" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_insurance_content_name_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_insurance_content_name_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_insurance_content_name_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_insurance_content_name_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_insurance_content_name_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_insurance_content_name_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="프리미엄 리퍼 보험"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_insurance_content_name_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_insurance_content_border"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_usage_infor_content_detail_claim_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_register_deactive_btn"
+                    android:paddingVertical="24dp"
+                    android:layout_marginVertical="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_insurance_layout"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_claim_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/bold"
+                            android:text="청구/납부 정보"
+                            android:paddingLeft="4dp"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_menu_spread_arrow_32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/my_usage_infor_content_detail_claim_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="28dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_claim_title_layout">
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/gradient_blue"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 청구방법 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_claim_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="청구방법"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_claim_content_border" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_claim_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_claim_content_claim_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_claim_content_claim_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_claim_content_claim_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_claim_content_claim_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_claim_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="SMS 명세서 [010-****-1916]"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_claim_content_claim_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_claim_content_border"/>
+
+
+                        <!-- 납부방법 -->
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_payment_title"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="납부방법"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_claim_content_claim_title" />
+
+                        <ImageView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_payment_border"
+                            android:layout_width="1.5dp"
+                            android:layout_height="0dp"
+                            android:background="@color/gradient_red"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_claim_content_payment_title"
+                            app:layout_constraintRight_toLeftOf="@id/my_usage_infor_content_detail_claim_content_payment_content"
+                            app:layout_constraintTop_toTopOf="@id/my_usage_infor_content_detail_claim_content_payment_title"
+                            app:layout_constraintBottom_toBottomOf="@id/my_usage_infor_content_detail_claim_content_payment_title"/>
+
+                        <TextView
+                            android:id="@+id/my_usage_infor_content_detail_claim_content_payment_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/medium"
+                            android:gravity="center"
+                            android:text="국민카드 5570-42**-****-***0"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@id/my_usage_infor_content_detail_claim_content_payment_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_detail_claim_content_claim_title"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </ScrollView>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_usage_infor_btnav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:elevation="4dp"
+        android:paddingHorizontal="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_usage_infor_btnav_layout_myaccount"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/my_usage_infor_btnav_layout_myaccount_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_account_32dp"
+                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_myaccount_tv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/my_usage_infor_btnav_layout_myaccount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_btnav_layout_myaccount_tv"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_myaccount_img" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_usage_infor_btnav_layout_home"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/my_usage_infor_btnav_layout_home_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_home_32dp"
+                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_home_tv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/my_usage_infor_btnav_layout_home_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_btnav_layout_home_tv"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_home_img" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_usage_infor_btnav_layout_mymembership"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/my_usage_infor_btnav_layout_mymembership_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_membership_32dp"
+                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_mymembership_tv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/my_usage_infor_btnav_layout_mymembership_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_btnav_layout_mymembership_tv"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_mymembership_img" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
