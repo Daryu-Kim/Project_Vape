@@ -36,6 +36,14 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/base_border"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -45,8 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingHorizontal="24dp"
-        android:paddingVertical="24dp"
-        app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout"
+        android:paddingVertical="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/my_usage_infor_menu_layout">
@@ -55,14 +63,15 @@
             android:id="@+id/my_usage_infor_content_tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/my_usage_infor_content_tab_img"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:background="@drawable/ic_vape_32dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -118,20 +127,17 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_tab_layout"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:scrollbars="none">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/my_usage_infor_content_detail_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="24dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_content_tab_layout">
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/my_usage_infor_content_detail_summary_layout"
@@ -925,115 +931,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/my_usage_infor_btnav_layout"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:elevation="4dp"
-        android:paddingHorizontal="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/my_usage_infor_btnav_layout_myaccount"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/my_usage_infor_btnav_layout_myaccount_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/ic_account_32dp"
-                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_myaccount_tv"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/my_usage_infor_btnav_layout_myaccount_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_btnav_layout_myaccount_tv"
-                android:textSize="14dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_myaccount_img" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/my_usage_infor_btnav_layout_home"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/my_usage_infor_btnav_layout_home_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/ic_home_32dp"
-                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_home_tv"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/my_usage_infor_btnav_layout_home_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_btnav_layout_home_tv"
-                android:textSize="14dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_home_img" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/my_usage_infor_btnav_layout_mymembership"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/my_usage_infor_btnav_layout_mymembership_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/ic_membership_32dp"
-                app:layout_constraintBottom_toTopOf="@id/my_usage_infor_btnav_layout_mymembership_tv"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/my_usage_infor_btnav_layout_mymembership_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_btnav_layout_mymembership_tv"
-                android:textSize="14dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_usage_infor_btnav_layout_mymembership_img" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

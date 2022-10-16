@@ -7,4 +7,5 @@
     <string name="main_btnav_layout_mymembership_tv">멤버십</string>
     <string name="login_content_login_tv_text">로그인 후\n</string>
     <string name="login_content_login_id_text">V 아이디 또는 이메일</string>
+    <string name="test">명의변경</string>
 </resources>

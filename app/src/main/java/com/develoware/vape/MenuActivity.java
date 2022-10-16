@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class MenuActivity extends Activity {
 
     Boolean isLogined = Boolean.FALSE;
+
+    ProgressBar menu_progress;
 
     // Menu Function Define
     ImageButton menu_function_setting, menu_function_close;
@@ -198,6 +201,8 @@ public class MenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        menu_progress = findViewById(R.id.menu_progress);
 
         // Menu Function Declare
         menu_function_setting = findViewById(R.id.menu_function_setting);
@@ -462,6 +467,7 @@ public class MenuActivity extends Activity {
         menu_function_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
@@ -478,6 +484,7 @@ public class MenuActivity extends Activity {
         menu_notlogin_layout_loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
@@ -487,6 +494,7 @@ public class MenuActivity extends Activity {
         menu_login_function_alert_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, AlertActivity.class);
                 startActivity(intent);
             }
@@ -495,6 +503,7 @@ public class MenuActivity extends Activity {
         menu_login_function_notice_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, NoticeActivity.class);
                 startActivity(intent);
             }
@@ -503,6 +512,7 @@ public class MenuActivity extends Activity {
         menu_login_function_lens_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, LensActivity.class);
                 startActivity(intent);
             }
@@ -512,6 +522,7 @@ public class MenuActivity extends Activity {
         menu_login_app_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, VAppsActivity.class);
                 startActivity(intent);
             }
@@ -650,6 +661,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_usage_infor_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyUsageInforActivity.class);
                 startActivity(intent);
             }
@@ -659,6 +671,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_usage_name_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyUsageNameActivity.class);
                 startActivity(intent);
             }
@@ -690,6 +703,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_state_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayStateActivity.class);
                 startActivity(intent);
             }
@@ -699,6 +713,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_once_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayOnceActivity.class);
                 startActivity(intent);
             }
@@ -708,6 +723,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_payment_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayPaymentActivity.class);
                 startActivity(intent);
             }
@@ -717,6 +733,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_receipt_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayReceiptActivity.class);
                 startActivity(intent);
             }
@@ -726,6 +743,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_request_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayRequestActivity.class);
                 startActivity(intent);
             }
@@ -735,6 +753,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_change_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayChangeActivity.class);
                 startActivity(intent);
             }
@@ -763,6 +782,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_mem_membership_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyMemMembershipActivity.class);
                 startActivity(intent);
             }
@@ -772,6 +792,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_mem_point_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyMemPointActivity.class);
                 startActivity(intent);
             }
@@ -781,6 +802,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_mem_coupon_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyMemCouponActivity.class);
                 startActivity(intent);
             }
@@ -790,6 +812,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_my_shop_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 if (my_shop_isClicked == Boolean.FALSE) {
                     Fold_MY();
                     menu_submenu_content_my_shop_border.setVisibility(View.VISIBLE);
@@ -809,6 +832,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_shop_order_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyShopOrderActivity.class);
                 startActivity(intent);
             }
@@ -818,6 +842,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_shop_basket_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyShopBasketActivity.class);
                 startActivity(intent);
             }
@@ -827,6 +852,7 @@ public class MenuActivity extends Activity {
         menu_submenu_my_shop_review_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyShopReviewActivity.class);
                 startActivity(intent);
             }
@@ -838,6 +864,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_com_recommend_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ComRecommendActivity.class);
                 startActivity(intent);
             }
@@ -847,6 +874,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_com_review_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ComReviewActivity.class);
                 startActivity(intent);
             }
@@ -856,6 +884,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_com_ques_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ComQuesActivity.class);
                 startActivity(intent);
             }
@@ -865,6 +894,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_com_suggest_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ComSuggestActivity.class);
                 startActivity(intent);
             }
@@ -874,6 +904,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_com_report_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ComReportActivity.class);
                 startActivity(intent);
             }
@@ -885,6 +916,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_guide_device_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, GuideDeviceActivity.class);
                 startActivity(intent);
             }
@@ -894,6 +926,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_guide_atomizer_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, GuideAtomizerActivity.class);
                 startActivity(intent);
             }
@@ -903,6 +936,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_guide_devicemanage_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, GuideDeviceManageActivity.class);
                 startActivity(intent);
             }
@@ -912,6 +946,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_guide_atomizermanage_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, GuideAtomizerManageActivity.class);
                 startActivity(intent);
             }
@@ -922,6 +957,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_guide_rebuildmanage_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, GuideRebuildManageActivity.class);
                 startActivity(intent);
             }
@@ -951,6 +987,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_guide_my_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemGuideMyActivity.class);
                 startActivity(intent);
             }
@@ -960,6 +997,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_guide_grade_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemGuideGradeActivity.class);
                 startActivity(intent);
             }
@@ -988,6 +1026,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_discount_shop_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemDiscountShopActivity.class);
                 startActivity(intent);
             }
@@ -997,6 +1036,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_discount_brand_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemDiscountBrandActivity.class);
                 startActivity(intent);
             }
@@ -1026,6 +1066,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_event_ongoing_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemEventOngoingActivity.class);
                 startActivity(intent);
             }
@@ -1035,6 +1076,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_event_winner_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemEventWinnerActivity.class);
                 startActivity(intent);
             }
@@ -1044,6 +1086,7 @@ public class MenuActivity extends Activity {
         menu_submenu_mem_event_end_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemEventEndActivity.class);
                 startActivity(intent);
             }
@@ -1055,6 +1098,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_service_support_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceSupportActivity.class);
                 startActivity(intent);
             }
@@ -1083,6 +1127,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_store_find_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceStoreFindActivity.class);
                 startActivity(intent);
             }
@@ -1092,6 +1137,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_store_cs_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceStoreCsActivity.class);
                 startActivity(intent);
             }
@@ -1101,6 +1147,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_store_as_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceStoreAsActivity.class);
                 startActivity(intent);
             }
@@ -1130,6 +1177,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_inquire_faq_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceInquireFaqActivity.class);
                 startActivity(intent);
             }
@@ -1139,6 +1187,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_inquire_call_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceInquireCallActivity.class);
                 startActivity(intent);
             }
@@ -1148,6 +1197,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_inquire_kakaotalk_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceInquireKakaotalkActivity.class);
                 startActivity(intent);
             }
@@ -1176,6 +1226,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_as_self_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceAsSelfActivity.class);
                 startActivity(intent);
             }
@@ -1185,6 +1236,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_as_request_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceAsRequestActivity.class);
                 startActivity(intent);
             }
@@ -1214,6 +1266,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_guide_service_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceGuideServiceActivity.class);
                 startActivity(intent);
             }
@@ -1223,6 +1276,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_guide_shop_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceGuideShopActivity.class);
                 startActivity(intent);
             }
@@ -1232,6 +1286,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_guide_damage_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceGuideDamageActivity.class);
                 startActivity(intent);
             }
@@ -1259,6 +1314,7 @@ public class MenuActivity extends Activity {
         menu_submenu_service_news_notice_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ServiceNewsNoticeActivity.class);
                 startActivity(intent);
             }
@@ -1270,6 +1326,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_shop_home_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopHomeActivity.class);
                 startActivity(intent);
             }
@@ -1297,6 +1354,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_device_mouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopDeviceMouthActivity.class);
                 startActivity(intent);
             }
@@ -1306,6 +1364,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_device_lung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopDeviceLungActivity.class);
                 startActivity(intent);
             }
@@ -1335,6 +1394,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_atomizer_pod_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAtomizerPodActivity.class);
                 startActivity(intent);
             }
@@ -1344,6 +1404,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_atomizer_tank_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAtomizerTankActivity.class);
                 startActivity(intent);
             }
@@ -1353,6 +1414,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_atomizer_rebuild_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAtomizerRebuildActivity.class);
                 startActivity(intent);
             }
@@ -1388,6 +1450,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_mentholmouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidMentholMouthActivity.class);
                 startActivity(intent);
             }
@@ -1397,6 +1460,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_menthollung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidMentholLungActivity.class);
                 startActivity(intent);
             }
@@ -1406,6 +1470,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_fruitmouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidFruitMouthActivity.class);
                 startActivity(intent);
             }
@@ -1415,6 +1480,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_fruitlung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidFruitLungActivity.class);
                 startActivity(intent);
             }
@@ -1424,6 +1490,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_drinkmouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidDrinkMouthActivity.class);
                 startActivity(intent);
             }
@@ -1433,6 +1500,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_drinklung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidDrinkLungActivity.class);
                 startActivity(intent);
             }
@@ -1442,6 +1510,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_dessertmouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidDessertMouthActivity.class);
                 startActivity(intent);
             }
@@ -1451,6 +1520,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_dessertlung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidDessertLungActivity.class);
                 startActivity(intent);
             }
@@ -1460,6 +1530,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_liquid_addi_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopLiquidAddiActivity.class);
                 startActivity(intent);
             }
@@ -1488,6 +1559,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_nicofree_mouth_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopNicofreeMouthActivity.class);
                 startActivity(intent);
             }
@@ -1497,6 +1569,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_nicofree_lung_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopNicofreeLungActivity.class);
                 startActivity(intent);
             }
@@ -1530,6 +1603,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_coil_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessoryCoilActivity.class);
                 startActivity(intent);
             }
@@ -1539,6 +1613,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_510_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessory510Activity.class);
                 startActivity(intent);
             }
@@ -1548,6 +1623,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_810_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessory810Activity.class);
                 startActivity(intent);
             }
@@ -1557,6 +1633,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_rebuild_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessoryRebuildActivity.class);
                 startActivity(intent);
             }
@@ -1566,6 +1643,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_case_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessoryCaseActivity.class);
                 startActivity(intent);
             }
@@ -1575,6 +1653,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_battery_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessoryBatteryActivity.class);
                 startActivity(intent);
             }
@@ -1584,6 +1663,7 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_film_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, ShopAccessoryFilmActivity.class);
                 startActivity(intent);
             }
@@ -1755,5 +1835,15 @@ public class MenuActivity extends Activity {
         menu_submenu_shop_accessory_film_layout.setVisibility(View.GONE);
         shop_accessory_isClicked = Boolean.FALSE;
         menu_submenu_content_shop_accessory_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        menu_progress.setVisibility(View.GONE);
+        Fold_MY();
+        Fold_MEM();
+        Fold_SERVICE();
+        Fold_SHOP();
     }
 }
