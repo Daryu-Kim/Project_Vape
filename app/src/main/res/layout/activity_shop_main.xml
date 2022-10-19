@@ -49,6 +49,7 @@
 
 
     <ScrollView
+        android:id="@+id/shop_main_content_scroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
@@ -63,6 +64,11 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="24dp"
             android:paddingVertical="24dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_main_content_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
