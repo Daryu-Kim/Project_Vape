@@ -392,42 +392,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/menu_submenu_title_com_layout"
-                        android:layout_width="84dp"
-                        android:layout_height="84dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/base_menu_deactive_btn"
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="8dp"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/menu_submenu_title_my_layout">
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_title_com_img"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:background="@drawable/ic_menu_com_32dp"
-                            app:layout_constraintBottom_toTopOf="@id/menu_submenu_title_com_tv"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/menu_submenu_title_com_tv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:text="커뮤니티"
-                            android:textSize="14dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/menu_submenu_title_com_img" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/menu_submenu_title_guide_layout"
                         android:layout_width="84dp"
                         android:layout_height="84dp"
@@ -437,7 +401,7 @@
                         android:paddingVertical="8dp"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/menu_submenu_title_com_layout">
+                        app:layout_constraintTop_toBottomOf="@id/menu_submenu_title_my_layout">
 
                         <ImageView
                             android:id="@+id/menu_submenu_title_guide_img"
@@ -766,70 +730,6 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_pay_receipt_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_pay_receipt_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="납부확인서/스마트 영수증"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_pay_request_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_pay_request_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="부가서비스 추가 신청"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_pay_change_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_pay_change_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="부가서비스 조회/변경"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/menu_submenu_content_my_mem_layout"
                             android:layout_width="match_parent"
                             android:layout_height="48dp">
@@ -927,207 +827,7 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_my_shop_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_shop_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="My Shop"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_my_shop_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_my_shop_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_shop_order_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_shop_order_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="주문내역"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_shop_basket_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_shop_basket_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="장바구니"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_my_shop_review_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_my_shop_review_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="구매후기"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
                     </LinearLayout> <!-- Sub MY Layout -->
-
-                    <LinearLayout
-                        android:id="@+id/menu_submenu_content_com_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_com_recommend_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_com_recommend_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="기기 &amp; 액상 추천 게시판"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_com_review_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_com_review_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="리뷰게시판"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_com_ques_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_com_ques_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="질문게시판"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_com_suggest_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_com_suggest_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="건의게시판"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_content_com_report_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_com_report_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="신고게시판"
-                                android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </LinearLayout> <!-- Sub COM Layout -->
 
                     <LinearLayout
                         android:id="@+id/menu_submenu_content_guide_layout"
@@ -1366,28 +1066,6 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/medium"
                                 android:text="V Shop 할인"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_mem_discount_brand_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_mem_discount_brand_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="제휴 베이핑샵"
                                 android:textSize="14dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintLeft_toLeftOf="parent"
@@ -1996,64 +1674,6 @@
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_shop_device_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_shop_device_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_device_mouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_device_mouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="입호흡 기기"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_device_lung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_device_lung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="폐호흡 기기"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -2068,85 +1688,6 @@
                                 android:fontFamily="@font/medium"
                                 android:text="무화기 구매"
                                 android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_shop_atomizer_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_shop_atomizer_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_atomizer_pod_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_atomizer_pod_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="팟"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_atomizer_tank_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_atomizer_tank_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="탱크"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_atomizer_rebuild_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_atomizer_rebuild_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="리빌드"
-                                android:textSize="14dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -2169,211 +1710,6 @@
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_shop_liquid_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_shop_liquid_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_mentholmouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_mentholmouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="멘솔 입호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_menthollung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_menthollung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="멘솔 폐호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_fruitmouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_fruitmouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="과일 입호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_fruitlung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_fruitlung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="과일 폐호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_drinkmouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_drinkmouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="음료 입호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_drinklung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_drinklung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="음료 폐호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_dessertmouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_dessertmouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="디저트 입호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_dessertlung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_dessertlung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="디저트 폐호흡 액상"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_liquid_addi_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_liquid_addi_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="첨가제"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -2388,64 +1724,6 @@
                                 android:fontFamily="@font/medium"
                                 android:text="무니코틴 액상 키트 구매"
                                 android:textSize="16dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_shop_nicofree_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_shop_nicofree_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_nicofree_mouth_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_nicofree_mouth_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="입호흡 액상 키트"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_nicofree_lung_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_nicofree_lung_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="폐호흡 액상 키트"
-                                android:textSize="14dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -2468,39 +1746,20 @@
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <ImageView
-                                android:id="@+id/menu_submenu_content_shop_accessory_img"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:background="@drawable/ic_menu_spread_arrow_32dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/menu_submenu_content_shop_accessory_border"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#333"
-                            android:visibility="gone" />
-
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_coil_layout"
+                            android:id="@+id/menu_submenu_content_shop_order_layout"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
+                            android:layout_height="48dp">
 
                             <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_coil_tv"
+                                android:id="@+id/menu_submenu_content_shop_order_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/medium"
-                                android:text="코일"
-                                android:textSize="14dp"
+                                android:text="주문내역"
+                                android:textSize="16dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -2508,125 +1767,17 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_510_layout"
+                            android:id="@+id/menu_submenu_content_shop_basket_layout"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
+                            android:layout_height="48dp">
 
                             <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_510_tv"
+                                android:id="@+id/menu_submenu_content_shop_basket_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/medium"
-                                android:text="510 드립팁"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_810_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_810_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="810 드립팁"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_rebuild_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_rebuild_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="리빌드 용품"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_case_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_case_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="파우치 &amp; 케이스"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_battery_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_battery_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="배터리"
-                                android:textSize="14dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/menu_submenu_shop_accessory_film_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingLeft="16dp"
-                            android:visibility="gone">
-
-                            <TextView
-                                android:id="@+id/menu_submenu_content_shop_accessory_film_tv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/medium"
-                                android:text="배터리 보호필름"
-                                android:textSize="14dp"
+                                android:text="장바구니"
+                                android:textSize="16dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />

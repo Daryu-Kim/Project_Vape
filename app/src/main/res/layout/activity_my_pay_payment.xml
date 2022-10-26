@@ -47,22 +47,471 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_pay_payment_content_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_menu_layout">
+
+        <ImageView
+            android:id="@+id/my_pay_payment_content_tab_img"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_vape_32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/my_pay_payment_content_tab_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="폐호흡"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_tab_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/my_pay_payment_content_tab_border"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/base_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_tab_category"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/my_pay_payment_content_tab_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:text="유웰 하보크"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_tab_border"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/my_pay_payment_content_tab_drop"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_menu_spread_arrow_32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_menu_layout">
+        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_tab_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/my_pay_payment_content_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="24dp"
-            android:paddingVertical="24dp">
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_pay_payment_content_way_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="24dp"
+                android:background="@drawable/base_register_deactive_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_way_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="이용중인 납부방법"
+                    android:fontFamily="@font/bold"
+                    android:textSize="16dp"/>
+
+                <ImageView
+                    android:id="@+id/my_pay_payment_content_way_way_border"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="2dp"
+                    android:background="@color/gradient_blue"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_way_tv"/>
+
+                <!-- 납부방법 -->
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_way_title"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="납부방법"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_way_border" />
+
+                <ImageView
+                    android:id="@+id/my_pay_payment_content_way_way_border2"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gradient_red"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_way_title"
+                    app:layout_constraintRight_toLeftOf="@id/my_pay_payment_content_way_way_content"
+                    app:layout_constraintTop_toTopOf="@id/my_pay_payment_content_way_way_title"
+                    app:layout_constraintBottom_toBottomOf="@id/my_pay_payment_content_way_way_title"/>
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_way_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="2022-10-11"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_way_title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_way_border" />
+
+                <!-- 납부 기준일 -->
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_date_title"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="납부일"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_way_title" />
+
+                <ImageView
+                    android:id="@+id/my_pay_payment_content_way_date_border"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gradient_red"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_date_title"
+                    app:layout_constraintRight_toLeftOf="@id/my_pay_payment_content_way_date_content"
+                    app:layout_constraintTop_toTopOf="@id/my_pay_payment_content_way_date_title"
+                    app:layout_constraintBottom_toBottomOf="@id/my_pay_payment_content_way_date_title"/>
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_date_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="2022-10-11"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_date_title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_way_content" />
+
+                <!-- 납부정보 -->
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_infor_title"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="납부정보"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_date_title" />
+
+                <ImageView
+                    android:id="@+id/my_pay_payment_content_way_infor_border"
+                    android:layout_width="1.5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gradient_red"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_infor_title"
+                    app:layout_constraintRight_toLeftOf="@id/my_pay_payment_content_way_infor_content"
+                    app:layout_constraintTop_toTopOf="@id/my_pay_payment_content_way_infor_title"
+                    app:layout_constraintBottom_toBottomOf="@id/my_pay_payment_content_way_infor_title"/>
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_infor_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="2022-10-11"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toRightOf="@id/my_pay_payment_content_way_infor_title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_date_border" />
+
+                <TextView
+                    android:id="@+id/my_pay_payment_content_way_tmi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/gradient_red"
+                    android:gravity="center"
+                    android:text="- 납부방법 변경 신청 후 상담원의 해피콜을 꼭 받아주세요."
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_infor_title" />
+
+                <Button
+                    android:id="@+id/my_pay_payment_content_way_btn"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/base_my_pay_once_btn"
+                    android:fontFamily="@font/medium"
+                    android:text="납부방법 변경"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_tmi"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/base_register_deactive_btn"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="24dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_way_layout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_pay_payment_content_pre_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:paddingStart="4dp"
+                        android:text="납부방법 변경 안내"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_menu_spread_arrow_32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_pay_payment_content_pre_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_layout">
+
+                    <ImageView
+                        android:id="@+id/my_pay_payment_content_pre_content_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gradient_blue"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_way_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="8dp"
+                        android:text="변경 가능한 납부방법"
+                        android:textSize="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_border" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_way_content1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 납부방법 변경은 가상계좌, 간편결제만 가능합니다."
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_way_title" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_way_content2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 간편결제의 경우, 명세서 내의 QR코드를 찍어서 결제가 가능합니다."
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_way_content1" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="8dp"
+                        android:text="변경 가능한 납부 기준일"
+                        android:textSize="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_way_content2" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_date_content1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 가상계좌 : 1차(15일), 2차(25일)"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_date_title" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_date_content2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 간편결제 : 1차(20일), 2차(25일)"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_date_content1" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_check_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="8dp"
+                        android:text="납부방법별 처리 기준일 안내"
+                        android:textSize="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_date_content2" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_check_content1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 가상계좌 : 3일 내 확인"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_check_title" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_check_content2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 간편결제 : 2일 내 확인"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_check_content1" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_confirm_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="8dp"
+                        android:text="납부방법 변경 당월 적용 시점"
+                        android:textSize="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_check_content2" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_confirm_content1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 납부 기준일 변경 : 매월 3일 전까지 신청"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_confirm_title" />
+
+                    <TextView
+                        android:id="@+id/my_pay_payment_content_pre_content_confirm_content2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingHorizontal="8dp"
+                        android:text="- 납부방법 변경 : 변경일 상관없이 다음 달 적용"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/my_pay_payment_content_pre_content_confirm_content1" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

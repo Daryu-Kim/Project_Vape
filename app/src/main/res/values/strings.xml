@@ -8,4 +8,6 @@
     <string name="login_content_login_tv_text">로그인 후\n</string>
     <string name="login_content_login_id_text">V 아이디 또는 이메일</string>
     <string name="test">명의변경</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

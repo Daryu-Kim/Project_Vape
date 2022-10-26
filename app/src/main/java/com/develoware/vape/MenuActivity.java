@@ -2,6 +2,7 @@ package com.develoware.vape;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -41,14 +42,14 @@ public class MenuActivity extends Activity {
 
     // Sub Menu Title Define
     ScrollView menu_submenu_scrollview;
-    ConstraintLayout menu_submenu_title_my_layout, menu_submenu_title_com_layout, menu_submenu_title_guide_layout, menu_submenu_title_mem_layout, menu_submenu_title_service_layout, menu_submenu_title_shop_layout;
+    ConstraintLayout menu_submenu_title_my_layout, menu_submenu_title_guide_layout, menu_submenu_title_mem_layout, menu_submenu_title_service_layout, menu_submenu_title_shop_layout;
 
 
     // Sub Menu MY Define
     LinearLayout menu_submenu_content_my_layout;
 
-    ConstraintLayout menu_submenu_content_my_usage_layout, menu_submenu_content_my_pay_layout, menu_submenu_content_my_mem_layout, menu_submenu_content_my_shop_layout;
-    ImageView menu_submenu_content_my_usage_img, menu_submenu_content_my_pay_img, menu_submenu_content_my_mem_img, menu_submenu_content_my_shop_img;
+    ConstraintLayout menu_submenu_content_my_usage_layout, menu_submenu_content_my_pay_layout, menu_submenu_content_my_mem_layout;
+    ImageView menu_submenu_content_my_usage_img, menu_submenu_content_my_pay_img, menu_submenu_content_my_mem_img;
 
     // Sub Menu MY_Usage Define
     ImageView menu_submenu_content_my_usage_border;
@@ -56,27 +57,16 @@ public class MenuActivity extends Activity {
 
     // Sub Menu MY_Pay Define
     ImageView menu_submenu_content_my_pay_border;
-    ConstraintLayout menu_submenu_my_pay_state_layout, menu_submenu_my_pay_once_layout, menu_submenu_my_pay_payment_layout, menu_submenu_my_pay_receipt_layout, menu_submenu_my_pay_request_layout, menu_submenu_my_pay_change_layout;
+    ConstraintLayout menu_submenu_my_pay_state_layout, menu_submenu_my_pay_once_layout, menu_submenu_my_pay_payment_layout;
 
     // Sub Menu MY_Mem Define
     ImageView menu_submenu_content_my_mem_border;
     ConstraintLayout menu_submenu_my_mem_membership_layout, menu_submenu_my_mem_point_layout, menu_submenu_my_mem_coupon_layout;
 
-    // Sub Menu MY_Shop Define
-    ImageView menu_submenu_content_my_shop_border;
-    ConstraintLayout menu_submenu_my_shop_order_layout, menu_submenu_my_shop_basket_layout, menu_submenu_my_shop_review_layout;
-
     // Sub Menu MY isClicked
     Boolean my_usage_isClicked = Boolean.FALSE;
     Boolean my_pay_isClicked = Boolean.FALSE;
     Boolean my_mem_isClicked = Boolean.FALSE;
-    Boolean my_shop_isClicked = Boolean.FALSE;
-
-
-    // Sub Menu COM Define
-    LinearLayout menu_submenu_content_com_layout;
-
-    ConstraintLayout menu_submenu_content_com_recommend_layout, menu_submenu_content_com_review_layout, menu_submenu_content_com_ques_layout, menu_submenu_content_com_suggest_layout, menu_submenu_content_com_report_layout;
 
 
     // Sub Menu GUIDE Define
@@ -100,7 +90,7 @@ public class MenuActivity extends Activity {
 
     // Sub Menu MEM_Discount Define
     ImageView menu_submenu_content_mem_discount_border;
-    ConstraintLayout menu_submenu_mem_discount_shop_layout, menu_submenu_mem_discount_brand_layout;
+    ConstraintLayout menu_submenu_mem_discount_shop_layout;
 
     // Sub Menu MEM_Event Define
     ImageView menu_submenu_content_mem_event_border;
@@ -154,43 +144,7 @@ public class MenuActivity extends Activity {
 
     ConstraintLayout menu_submenu_content_shop_home_layout, menu_submenu_content_shop_device_layout,
             menu_submenu_content_shop_atomizer_layout, menu_submenu_content_shop_liquid_layout, menu_submenu_content_shop_nicofree_layout,
-            menu_submenu_content_shop_accessory_layout;
-    ImageView menu_submenu_content_shop_device_img, menu_submenu_content_shop_atomizer_img, menu_submenu_content_shop_liquid_img,
-            menu_submenu_content_shop_nicofree_img, menu_submenu_content_shop_accessory_img;
-
-    // Sub Menu SHOP_Device Define
-    ImageView menu_submenu_content_shop_device_border;
-    ConstraintLayout menu_submenu_shop_device_mouth_layout, menu_submenu_shop_device_lung_layout;
-
-    // Sub Menu SHOP_Atomizer Define
-    ImageView menu_submenu_content_shop_atomizer_border;
-    ConstraintLayout menu_submenu_shop_atomizer_pod_layout, menu_submenu_shop_atomizer_tank_layout, menu_submenu_shop_atomizer_rebuild_layout;
-
-    // Sub Menu SHOP_Liquid Define
-    ImageView menu_submenu_content_shop_liquid_border;
-    ConstraintLayout menu_submenu_shop_liquid_mentholmouth_layout, menu_submenu_shop_liquid_menthollung_layout,
-            menu_submenu_shop_liquid_fruitmouth_layout, menu_submenu_shop_liquid_fruitlung_layout,
-            menu_submenu_shop_liquid_drinkmouth_layout, menu_submenu_shop_liquid_drinklung_layout,
-            menu_submenu_shop_liquid_dessertmouth_layout, menu_submenu_shop_liquid_dessertlung_layout,
-            menu_submenu_shop_liquid_addi_layout;
-
-    // Sub Menu SHOP_Nicofree Define
-    ImageView menu_submenu_content_shop_nicofree_border;
-    ConstraintLayout menu_submenu_shop_nicofree_mouth_layout, menu_submenu_shop_nicofree_lung_layout;
-
-    // Sub Menu SHOP_Accessory Define
-    ImageView menu_submenu_content_shop_accessory_border;
-    ConstraintLayout menu_submenu_shop_accessory_coil_layout, menu_submenu_shop_accessory_510_layout,
-            menu_submenu_shop_accessory_810_layout, menu_submenu_shop_accessory_rebuild_layout,
-            menu_submenu_shop_accessory_case_layout, menu_submenu_shop_accessory_battery_layout,
-            menu_submenu_shop_accessory_film_layout;
-
-    // Sub Menu SHOP isClicked
-    Boolean shop_device_isClicked = Boolean.FALSE;
-    Boolean shop_atomizer_isClicked = Boolean.FALSE;
-    Boolean shop_liquid_isClicked = Boolean.FALSE;
-    Boolean shop_nicofree_isClicked = Boolean.FALSE;
-    Boolean shop_accessory_isClicked = Boolean.FALSE;
+            menu_submenu_content_shop_accessory_layout, menu_submenu_content_shop_order_layout, menu_submenu_content_shop_basket_layout;
 
     // Menu Log Define
     ImageView menu_log_border;
@@ -230,7 +184,6 @@ public class MenuActivity extends Activity {
 
         // Sub Menu Title Declare
         menu_submenu_title_my_layout = findViewById(R.id.menu_submenu_title_my_layout);
-        menu_submenu_title_com_layout = findViewById(R.id.menu_submenu_title_com_layout);
         menu_submenu_title_guide_layout = findViewById(R.id.menu_submenu_title_guide_layout);
         menu_submenu_title_mem_layout = findViewById(R.id.menu_submenu_title_mem_layout);
         menu_submenu_title_service_layout = findViewById(R.id.menu_submenu_title_service_layout);
@@ -248,9 +201,6 @@ public class MenuActivity extends Activity {
         menu_submenu_content_my_mem_layout = findViewById(R.id.menu_submenu_content_my_mem_layout);
         menu_submenu_content_my_mem_img = findViewById(R.id.menu_submenu_content_my_mem_img);
 
-        menu_submenu_content_my_shop_layout = findViewById(R.id.menu_submenu_content_my_shop_layout);
-        menu_submenu_content_my_shop_img = findViewById(R.id.menu_submenu_content_my_shop_img);
-
         // Sub Menu MY_Usage Declare
         menu_submenu_content_my_usage_border = findViewById(R.id.menu_submenu_content_my_usage_border);
         menu_submenu_my_usage_infor_layout = findViewById(R.id.menu_submenu_my_usage_infor_layout);
@@ -261,31 +211,12 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_state_layout = findViewById(R.id.menu_submenu_my_pay_state_layout);
         menu_submenu_my_pay_once_layout = findViewById(R.id.menu_submenu_my_pay_once_layout);
         menu_submenu_my_pay_payment_layout = findViewById(R.id.menu_submenu_my_pay_payment_layout);
-        menu_submenu_my_pay_receipt_layout = findViewById(R.id.menu_submenu_my_pay_receipt_layout);
-        menu_submenu_my_pay_request_layout = findViewById(R.id.menu_submenu_my_pay_request_layout);
-        menu_submenu_my_pay_change_layout = findViewById(R.id.menu_submenu_my_pay_change_layout);
 
         // Sub Menu MY_Mem Declare
         menu_submenu_content_my_mem_border = findViewById(R.id.menu_submenu_content_my_mem_border);
         menu_submenu_my_mem_membership_layout = findViewById(R.id.menu_submenu_my_mem_membership_layout);
         menu_submenu_my_mem_point_layout = findViewById(R.id.menu_submenu_my_mem_point_layout);
         menu_submenu_my_mem_coupon_layout = findViewById(R.id.menu_submenu_my_mem_coupon_layout);
-
-        // Sub Menu MY_Shop Declare
-        menu_submenu_content_my_shop_border = findViewById(R.id.menu_submenu_content_my_shop_border);
-        menu_submenu_my_shop_order_layout = findViewById(R.id.menu_submenu_my_shop_order_layout);
-        menu_submenu_my_shop_basket_layout = findViewById(R.id.menu_submenu_my_shop_basket_layout);
-        menu_submenu_my_shop_review_layout = findViewById(R.id.menu_submenu_my_shop_review_layout);
-
-
-        // Sub Menu COM Declare
-        menu_submenu_content_com_layout = findViewById(R.id.menu_submenu_content_com_layout);
-
-        menu_submenu_content_com_recommend_layout = findViewById(R.id.menu_submenu_content_com_recommend_layout);
-        menu_submenu_content_com_review_layout = findViewById(R.id.menu_submenu_content_com_review_layout);
-        menu_submenu_content_com_ques_layout = findViewById(R.id.menu_submenu_content_com_ques_layout);
-        menu_submenu_content_com_suggest_layout = findViewById(R.id.menu_submenu_content_com_suggest_layout);
-        menu_submenu_content_com_report_layout = findViewById(R.id.menu_submenu_content_com_report_layout);
 
 
         // Sub Menu GUIDE Declare
@@ -318,7 +249,6 @@ public class MenuActivity extends Activity {
         // Sub Menu MEM_Discount Declare
         menu_submenu_content_mem_discount_border = findViewById(R.id.menu_submenu_content_mem_discount_border);
         menu_submenu_mem_discount_shop_layout = findViewById(R.id.menu_submenu_mem_discount_shop_layout);
-        menu_submenu_mem_discount_brand_layout = findViewById(R.id.menu_submenu_mem_discount_brand_layout);
 
         // Sub Menu MEM_Event Declare
         menu_submenu_content_mem_event_border = findViewById(R.id.menu_submenu_content_mem_event_border);
@@ -381,57 +311,18 @@ public class MenuActivity extends Activity {
         menu_submenu_content_shop_home_layout = findViewById(R.id.menu_submenu_content_shop_home_layout);
 
         menu_submenu_content_shop_device_layout = findViewById(R.id.menu_submenu_content_shop_device_layout);
-        menu_submenu_content_shop_device_img = findViewById(R.id.menu_submenu_content_shop_device_img);
 
         menu_submenu_content_shop_atomizer_layout = findViewById(R.id.menu_submenu_content_shop_atomizer_layout);
-        menu_submenu_content_shop_atomizer_img = findViewById(R.id.menu_submenu_content_shop_atomizer_img);
 
         menu_submenu_content_shop_liquid_layout = findViewById(R.id.menu_submenu_content_shop_liquid_layout);
-        menu_submenu_content_shop_liquid_img = findViewById(R.id.menu_submenu_content_shop_liquid_img);
 
         menu_submenu_content_shop_nicofree_layout = findViewById(R.id.menu_submenu_content_shop_nicofree_layout);
-        menu_submenu_content_shop_nicofree_img = findViewById(R.id.menu_submenu_content_shop_nicofree_img);
 
         menu_submenu_content_shop_accessory_layout = findViewById(R.id.menu_submenu_content_shop_accessory_layout);
-        menu_submenu_content_shop_accessory_img = findViewById(R.id.menu_submenu_content_shop_accessory_img);
 
-        // Sub Menu SHOP_Device Declare
-        menu_submenu_content_shop_device_border = findViewById(R.id.menu_submenu_content_shop_device_border);
-        menu_submenu_shop_device_mouth_layout = findViewById(R.id.menu_submenu_shop_device_mouth_layout);
-        menu_submenu_shop_device_lung_layout = findViewById(R.id.menu_submenu_shop_device_lung_layout);
+        menu_submenu_content_shop_order_layout = findViewById(R.id.menu_submenu_content_shop_order_layout);
 
-        // Sub Menu SHOP_Atomizer Declare
-        menu_submenu_content_shop_atomizer_border = findViewById(R.id.menu_submenu_content_shop_atomizer_border);
-        menu_submenu_shop_atomizer_pod_layout = findViewById(R.id.menu_submenu_shop_atomizer_pod_layout);
-        menu_submenu_shop_atomizer_tank_layout = findViewById(R.id.menu_submenu_shop_atomizer_tank_layout);
-        menu_submenu_shop_atomizer_rebuild_layout = findViewById(R.id.menu_submenu_shop_atomizer_rebuild_layout);
-
-        // Sub Menu SHOP_Liquid Declare
-        menu_submenu_content_shop_liquid_border = findViewById(R.id.menu_submenu_content_shop_liquid_border);
-        menu_submenu_shop_liquid_mentholmouth_layout = findViewById(R.id.menu_submenu_shop_liquid_mentholmouth_layout);
-        menu_submenu_shop_liquid_menthollung_layout = findViewById(R.id.menu_submenu_shop_liquid_menthollung_layout);
-        menu_submenu_shop_liquid_fruitmouth_layout = findViewById(R.id.menu_submenu_shop_liquid_fruitmouth_layout);
-        menu_submenu_shop_liquid_fruitlung_layout = findViewById(R.id.menu_submenu_shop_liquid_fruitlung_layout);
-        menu_submenu_shop_liquid_drinkmouth_layout = findViewById(R.id.menu_submenu_shop_liquid_drinkmouth_layout);
-        menu_submenu_shop_liquid_drinklung_layout = findViewById(R.id.menu_submenu_shop_liquid_drinklung_layout);
-        menu_submenu_shop_liquid_dessertmouth_layout = findViewById(R.id.menu_submenu_shop_liquid_dessertmouth_layout);
-        menu_submenu_shop_liquid_dessertlung_layout = findViewById(R.id.menu_submenu_shop_liquid_dessertlung_layout);
-        menu_submenu_shop_liquid_addi_layout = findViewById(R.id.menu_submenu_shop_liquid_addi_layout);
-
-        // Sub Menu SHOP_Nicofree Declare
-        menu_submenu_content_shop_nicofree_border = findViewById(R.id.menu_submenu_content_shop_nicofree_border);
-        menu_submenu_shop_nicofree_mouth_layout = findViewById(R.id.menu_submenu_shop_nicofree_mouth_layout);
-        menu_submenu_shop_nicofree_lung_layout = findViewById(R.id.menu_submenu_shop_nicofree_lung_layout);
-
-        // Sub Menu SHOP_Accessory Declare
-        menu_submenu_content_shop_accessory_border = findViewById(R.id.menu_submenu_content_shop_accessory_border);
-        menu_submenu_shop_accessory_coil_layout = findViewById(R.id.menu_submenu_shop_accessory_coil_layout);
-        menu_submenu_shop_accessory_510_layout = findViewById(R.id.menu_submenu_shop_accessory_510_layout);
-        menu_submenu_shop_accessory_810_layout = findViewById(R.id.menu_submenu_shop_accessory_810_layout);
-        menu_submenu_shop_accessory_rebuild_layout = findViewById(R.id.menu_submenu_shop_accessory_rebuild_layout);
-        menu_submenu_shop_accessory_case_layout = findViewById(R.id.menu_submenu_shop_accessory_case_layout);
-        menu_submenu_shop_accessory_battery_layout = findViewById(R.id.menu_submenu_shop_accessory_battery_layout);
-        menu_submenu_shop_accessory_film_layout = findViewById(R.id.menu_submenu_shop_accessory_film_layout);
+        menu_submenu_content_shop_basket_layout = findViewById(R.id.menu_submenu_content_shop_basket_layout);
 
         // Menu Log Declare
         menu_log_border = findViewById(R.id.menu_log_border);
@@ -534,7 +425,6 @@ public class MenuActivity extends Activity {
             public void onClick(View v) {
                 menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
                 menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_active_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
@@ -547,30 +437,12 @@ public class MenuActivity extends Activity {
             }
         });
 
-        // Sub Menu COM OnClick
-        menu_submenu_title_com_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
-                menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_active_btn);
-                menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_shop_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-
-                Invisible_Content();
-                menu_submenu_content_com_layout.setVisibility(View.VISIBLE);
-            }
-        });
-
         // Sub Menu GUIDE OnClick
         menu_submenu_title_guide_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
                 menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_active_btn);
                 menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
@@ -587,7 +459,6 @@ public class MenuActivity extends Activity {
             public void onClick(View v) {
                 menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
                 menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_active_btn);
                 menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
@@ -606,7 +477,6 @@ public class MenuActivity extends Activity {
             public void onClick(View v) {
                 menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
                 menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_active_btn);
@@ -625,7 +495,6 @@ public class MenuActivity extends Activity {
             public void onClick(View v) {
                 menu_submenu_scrollview.fullScroll(ScrollView.FOCUS_UP);
                 menu_submenu_title_my_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
-                menu_submenu_title_com_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_guide_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_mem_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
                 menu_submenu_title_service_layout.setBackgroundResource(R.drawable.base_menu_deactive_btn);
@@ -633,8 +502,6 @@ public class MenuActivity extends Activity {
 
                 Invisible_Content();
                 menu_submenu_content_shop_layout.setVisibility(View.VISIBLE);
-
-                Fold_SHOP();
             }
         });
 
@@ -687,9 +554,6 @@ public class MenuActivity extends Activity {
                     menu_submenu_my_pay_state_layout.setVisibility(View.VISIBLE);
                     menu_submenu_my_pay_once_layout.setVisibility(View.VISIBLE);
                     menu_submenu_my_pay_payment_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_pay_receipt_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_pay_request_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_pay_change_layout.setVisibility(View.VISIBLE);
                     my_pay_isClicked = Boolean.TRUE;
                     menu_submenu_content_my_pay_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
                 } else {
@@ -725,36 +589,6 @@ public class MenuActivity extends Activity {
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyPayPaymentActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Pay_Receipt OnClick
-        menu_submenu_my_pay_receipt_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyPayReceiptActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Pay_Request OnClick
-        menu_submenu_my_pay_request_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyPayRequestActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Pay_Change OnClick
-        menu_submenu_my_pay_change_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyPayChangeActivity.class);
                 startActivity(intent);
             }
         });
@@ -804,108 +638,6 @@ public class MenuActivity extends Activity {
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MyMemCouponActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Shop OnClick
-        menu_submenu_content_my_shop_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                if (my_shop_isClicked == Boolean.FALSE) {
-                    Fold_MY();
-                    menu_submenu_content_my_shop_border.setVisibility(View.VISIBLE);
-                    menu_submenu_my_shop_order_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_shop_basket_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_my_shop_review_layout.setVisibility(View.VISIBLE);
-                    my_shop_isClicked = Boolean.TRUE;
-                    menu_submenu_content_my_shop_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_MY();
-                }
-            }
-        });
-
-        /* MY_Shop */
-        // Sub Menu MY_Shop_Order OnClick
-        menu_submenu_my_shop_order_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyShopOrderActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Shop_Basket OnClick
-        menu_submenu_my_shop_basket_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyShopBasketActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MY_Shop_Review OnClick
-        menu_submenu_my_shop_review_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MyShopReviewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        /* COM */
-        // Sub Menu COM_Recommend OnClick
-        menu_submenu_content_com_recommend_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ComRecommendActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu COM_Review OnClick
-        menu_submenu_content_com_review_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ComReviewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu COM_Ques OnClick
-        menu_submenu_content_com_ques_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ComQuesActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu COM_Suggest OnClick
-        menu_submenu_content_com_suggest_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ComSuggestActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu COM_Report OnClick
-        menu_submenu_content_com_report_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ComReportActivity.class);
                 startActivity(intent);
             }
         });
@@ -1012,7 +744,6 @@ public class MenuActivity extends Activity {
                     Fold_MEM();
                     menu_submenu_content_mem_discount_border.setVisibility(View.VISIBLE);
                     menu_submenu_mem_discount_shop_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_mem_discount_brand_layout.setVisibility(View.VISIBLE);
                     mem_discount_isClicked = Boolean.TRUE;
                     menu_submenu_content_mem_discount_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
                 } else {
@@ -1028,16 +759,6 @@ public class MenuActivity extends Activity {
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(MenuActivity.this, MemDiscountShopActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu MEM_Discount_Brand OnClick
-        menu_submenu_mem_discount_brand_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, MemDiscountBrandActivity.class);
                 startActivity(intent);
             }
         });
@@ -1188,7 +909,7 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ServiceInquireCallActivity.class);
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:01068941916"));
                 startActivity(intent);
             }
         });
@@ -1198,7 +919,7 @@ public class MenuActivity extends Activity {
             @Override
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ServiceInquireKakaotalkActivity.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://pf.kakao.com/_hKITxj/chat"));
                 startActivity(intent);
             }
         });
@@ -1336,37 +1057,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_shop_device_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (shop_device_isClicked == Boolean.FALSE) {
-                    Fold_SHOP();
-                    menu_submenu_content_shop_device_border.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_device_mouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_device_lung_layout.setVisibility(View.VISIBLE);
-                    shop_device_isClicked = Boolean.TRUE;
-                    menu_submenu_content_shop_device_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_SHOP();
-                }
-            }
-        });
 
-        /* SHOP_Device */
-        // Sub Menu SHOP_Device_Mouth OnClick
-        menu_submenu_shop_device_mouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopDeviceMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Device_Lung OnClick
-        menu_submenu_shop_device_lung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopDeviceLungActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -1375,48 +1066,7 @@ public class MenuActivity extends Activity {
         menu_submenu_content_shop_atomizer_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (shop_atomizer_isClicked == Boolean.FALSE) {
-                    Fold_SHOP();
-                    menu_submenu_content_shop_atomizer_border.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_atomizer_pod_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_atomizer_tank_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_atomizer_rebuild_layout.setVisibility(View.VISIBLE);
-                    shop_atomizer_isClicked = Boolean.TRUE;
-                    menu_submenu_content_shop_atomizer_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_SHOP();
-                }
-            }
-        });
 
-        /* SHOP_Atomizer */
-        // Sub Menu SHOP_Atomizer_Pod OnClick
-        menu_submenu_shop_atomizer_pod_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAtomizerPodActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Atomizer_Tank OnClick
-        menu_submenu_shop_atomizer_tank_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAtomizerTankActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Atomizer_Rebuild OnClick
-        menu_submenu_shop_atomizer_rebuild_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAtomizerRebuildActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -1425,249 +1075,46 @@ public class MenuActivity extends Activity {
         menu_submenu_content_shop_liquid_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (shop_liquid_isClicked == Boolean.FALSE) {
-                    Fold_SHOP();
-                    menu_submenu_content_shop_liquid_border.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_mentholmouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_menthollung_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_fruitmouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_fruitlung_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_drinkmouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_drinklung_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_dessertmouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_dessertlung_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_liquid_addi_layout.setVisibility(View.VISIBLE);
-                    shop_liquid_isClicked = Boolean.TRUE;
-                    menu_submenu_content_shop_liquid_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_SHOP();
-                }
+
             }
         });
-
-        /* SHOP_Liquid */
-        // Sub Menu SHOP_Liquid_MentholMouth OnClick
-        menu_submenu_shop_liquid_mentholmouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidMentholMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_MentholLung OnClick
-        menu_submenu_shop_liquid_menthollung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidMentholLungActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_FruitMouth OnClick
-        menu_submenu_shop_liquid_fruitmouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidFruitMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_FruitLung OnClick
-        menu_submenu_shop_liquid_fruitlung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidFruitLungActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_DrinkMouth OnClick
-        menu_submenu_shop_liquid_drinkmouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidDrinkMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_DrinkLung OnClick
-        menu_submenu_shop_liquid_drinklung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidDrinkLungActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_DessertMouth OnClick
-        menu_submenu_shop_liquid_dessertmouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidDessertMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_DessertLung OnClick
-        menu_submenu_shop_liquid_dessertlung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidDessertLungActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Liquid_Addi OnClick
-        menu_submenu_shop_liquid_addi_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopLiquidAddiActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         // Sub Menu SHOP_Nicofree OnClick
         menu_submenu_content_shop_nicofree_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (shop_nicofree_isClicked == Boolean.FALSE) {
-                    Fold_SHOP();
-                    menu_submenu_content_shop_nicofree_border.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_nicofree_mouth_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_nicofree_lung_layout.setVisibility(View.VISIBLE);
-                    shop_nicofree_isClicked = Boolean.TRUE;
-                    menu_submenu_content_shop_nicofree_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_SHOP();
-                }
+
             }
         });
-
-        /* SHOP_Nicofree */
-        // Sub Menu SHOP_Nicofree_Mouth OnClick
-        menu_submenu_shop_nicofree_mouth_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopNicofreeMouthActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Nicofree_Lung OnClick
-        menu_submenu_shop_nicofree_lung_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopNicofreeLungActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         // Sub Menu SHOP_Accessory OnClick
         menu_submenu_content_shop_accessory_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (shop_accessory_isClicked == Boolean.FALSE) {
-                    Fold_SHOP();
-                    menu_submenu_content_shop_accessory_border.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_coil_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_510_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_810_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_rebuild_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_case_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_battery_layout.setVisibility(View.VISIBLE);
-                    menu_submenu_shop_accessory_film_layout.setVisibility(View.VISIBLE);
-                    shop_accessory_isClicked = Boolean.TRUE;
-                    menu_submenu_content_shop_accessory_img.setBackgroundResource(R.drawable.ic_menu_fold_arrow_32dp);
-                } else {
-                    Fold_SHOP();
-                }
+
             }
         });
 
-        /* SHOP_Accessory */
-        // Sub Menu SHOP_Accessory_Coil OnClick
-        menu_submenu_shop_accessory_coil_layout.setOnClickListener(new View.OnClickListener() {
+        // Sub Menu SHOP_Order OnClick
+        menu_submenu_content_shop_order_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessoryCoilActivity.class);
+                Intent intent = new Intent(MenuActivity.this, ShopOrderActivity.class);
                 startActivity(intent);
             }
         });
 
-        // Sub Menu SHOP_Accessory_510 OnClick
-        menu_submenu_shop_accessory_510_layout.setOnClickListener(new View.OnClickListener() {
+        // Sub Menu SHOP_Basket OnClick
+        menu_submenu_content_shop_basket_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessory510Activity.class);
+                Intent intent = new Intent(MenuActivity.this, ShopBasketActivity.class);
                 startActivity(intent);
             }
         });
 
-        // Sub Menu SHOP_Accessory_810 OnClick
-        menu_submenu_shop_accessory_810_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessory810Activity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Accessory_Rebuild OnClick
-        menu_submenu_shop_accessory_rebuild_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessoryRebuildActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Accessory_Case OnClick
-        menu_submenu_shop_accessory_case_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessoryCaseActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Accessory_Battery OnClick
-        menu_submenu_shop_accessory_battery_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessoryBatteryActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Sub Menu SHOP_Accessory_Film OnClick
-        menu_submenu_shop_accessory_film_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                menu_progress.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(MenuActivity.this, ShopAccessoryFilmActivity.class);
-                startActivity(intent);
-            }
-        });
 
         /* Menu Log */
         // Menu_Log_Logout OnClick
@@ -1681,7 +1128,6 @@ public class MenuActivity extends Activity {
 
     public void Invisible_Content() {
         menu_submenu_content_my_layout.setVisibility(View.GONE);
-        menu_submenu_content_com_layout.setVisibility(View.GONE);
         menu_submenu_content_guide_layout.setVisibility(View.GONE);
         menu_submenu_content_mem_layout.setVisibility(View.GONE);
         menu_submenu_content_service_layout.setVisibility(View.GONE);
@@ -1701,9 +1147,6 @@ public class MenuActivity extends Activity {
         menu_submenu_my_pay_state_layout.setVisibility(View.GONE);
         menu_submenu_my_pay_once_layout.setVisibility(View.GONE);
         menu_submenu_my_pay_payment_layout.setVisibility(View.GONE);
-        menu_submenu_my_pay_receipt_layout.setVisibility(View.GONE);
-        menu_submenu_my_pay_request_layout.setVisibility(View.GONE);
-        menu_submenu_my_pay_change_layout.setVisibility(View.GONE);
         my_pay_isClicked = Boolean.FALSE;
         menu_submenu_content_my_pay_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
 
@@ -1714,14 +1157,6 @@ public class MenuActivity extends Activity {
         menu_submenu_my_mem_coupon_layout.setVisibility(View.GONE);
         my_mem_isClicked = Boolean.FALSE;
         menu_submenu_content_my_mem_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-
-        // MY_Shop
-        menu_submenu_content_my_shop_border.setVisibility(View.GONE);
-        menu_submenu_my_shop_order_layout.setVisibility(View.GONE);
-        menu_submenu_my_shop_basket_layout.setVisibility(View.GONE);
-        menu_submenu_my_shop_review_layout.setVisibility(View.GONE);
-        my_shop_isClicked = Boolean.FALSE;
-        menu_submenu_content_my_shop_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
     }
 
     public void Fold_MEM() {
@@ -1735,7 +1170,6 @@ public class MenuActivity extends Activity {
         // MEM_Discount
         menu_submenu_content_mem_discount_border.setVisibility(View.GONE);
         menu_submenu_mem_discount_shop_layout.setVisibility(View.GONE);
-        menu_submenu_mem_discount_brand_layout.setVisibility(View.GONE);
         mem_discount_isClicked = Boolean.FALSE;
         menu_submenu_content_mem_discount_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
 
@@ -1787,56 +1221,6 @@ public class MenuActivity extends Activity {
         menu_submenu_content_service_news_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
     }
 
-    public void Fold_SHOP() {
-        // SHOP_Device
-        menu_submenu_content_shop_device_border.setVisibility(View.GONE);
-        menu_submenu_shop_device_mouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_device_lung_layout.setVisibility(View.GONE);
-        shop_device_isClicked = Boolean.FALSE;
-        menu_submenu_content_shop_device_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-
-        // SHOP_Atomizer
-        menu_submenu_content_shop_atomizer_border.setVisibility(View.GONE);
-        menu_submenu_shop_atomizer_pod_layout.setVisibility(View.GONE);
-        menu_submenu_shop_atomizer_tank_layout.setVisibility(View.GONE);
-        menu_submenu_shop_atomizer_rebuild_layout.setVisibility(View.GONE);
-        shop_atomizer_isClicked = Boolean.FALSE;
-        menu_submenu_content_shop_atomizer_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-
-        // SHOP_Liquid
-        menu_submenu_content_shop_liquid_border.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_mentholmouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_menthollung_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_fruitmouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_fruitlung_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_drinkmouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_drinklung_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_dessertmouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_dessertlung_layout.setVisibility(View.GONE);
-        menu_submenu_shop_liquid_addi_layout.setVisibility(View.GONE);
-        shop_liquid_isClicked = Boolean.FALSE;
-        menu_submenu_content_shop_liquid_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-
-        // SHOP_Nicofree
-        menu_submenu_content_shop_nicofree_border.setVisibility(View.GONE);
-        menu_submenu_shop_nicofree_mouth_layout.setVisibility(View.GONE);
-        menu_submenu_shop_nicofree_lung_layout.setVisibility(View.GONE);
-        shop_nicofree_isClicked = Boolean.FALSE;
-        menu_submenu_content_shop_nicofree_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-
-        // SHOP_Accessory
-        menu_submenu_content_shop_accessory_border.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_coil_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_510_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_810_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_rebuild_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_case_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_battery_layout.setVisibility(View.GONE);
-        menu_submenu_shop_accessory_film_layout.setVisibility(View.GONE);
-        shop_accessory_isClicked = Boolean.FALSE;
-        menu_submenu_content_shop_accessory_img.setBackgroundResource(R.drawable.ic_menu_spread_arrow_32dp);
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -1844,6 +1228,5 @@ public class MenuActivity extends Activity {
         Fold_MY();
         Fold_MEM();
         Fold_SERVICE();
-        Fold_SHOP();
     }
 }
